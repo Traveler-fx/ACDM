@@ -29,8 +29,8 @@ if __name__ == '__main__':
     l  = 100
     data, real_labels = data,labels=generate_iris_data(path="../dataset/iris/iris.data")
     data = data_preprocess(data)
-    m = len(set(real_labels))
-    n = int(len(data) * (1 / r))
-    ARI_record=NNGAMD(data, real_labels,m,k,l,n)
+    b_1 = len(set(real_labels))
+    b_2 = int(len(data) * (1 / r))
+    ARI_record=NNGAMD(data, real_labels,b_1,k,l,b_2)
     result_to_csv(ARI_record, title="iris")
 

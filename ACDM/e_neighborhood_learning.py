@@ -94,7 +94,7 @@ def neighborhood_learning(skeleton, data, predict_labels, neighborhood,neighborh
         predict_labels=influence_model_propagation(skeleton, neighborhood)
         ari = adjusted_rand_score(real_labels, predict_labels)
         record.append([{"iter": iter, "interaction": count, "ari": ari}])
-        print(iter, count, ari)
+        print("iteration: %d, queries: %d, ari: %s" % (iter, count, ari))
         iter=iter+1
         if flag == True:
             break
